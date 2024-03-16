@@ -6,7 +6,7 @@ namespace PerimetroRetangulo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Calculando a área de um retângulo");
+            Console.WriteLine("Calculando a área, perímetro e a diagonal  de um retângulo");
             Console.WriteLine("\nDigite a altura do retângulo");
             double altura = double.Parse(Console.ReadLine());
 
