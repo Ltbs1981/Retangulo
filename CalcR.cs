@@ -4,22 +4,36 @@ namespace PerimetroRetangulo
 {
     class CalcR
     {
-        public double altura;
-        public double largura;
+        public double Altura;
+        public double Largura;
+
+        public CalcR(double altura, double largura)
+        {
+            Altura = altura;
+            Largura = largura;
+        }
 
         public double CalculandoPerimetro()
         {
-            return (largura + altura) * 2;
+            return (Largura + Altura) * 2;
         }
 
         public double CalculandoArea()
         {
-            return largura * altura;
+            return Largura * Altura;
         }
 
         public double CalculandoDiagonal()
         {
-            return Math.Sqrt(Math.Pow(largura, 2) + Math.Pow(altura, 2));
+            return Math.Sqrt(Largura * Largura + Altura * Altura);
+        }
+
+        public override string ToString()
+        {
+            double perimetro = Math.Round(CalculandoPerimetro(), 2);
+            double area = Math.Round(CalculandoArea(), 2);
+            double diagonal = Math.Round(CalculandoDiagonal(), 2);
+            return $"A área é: {area} \nO perímetro é: {perimetro} \nA diagonal é: {diagonal}";
         }
     }
 }
